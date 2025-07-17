@@ -8,26 +8,31 @@ Ce projet est découpé en trois parties :
 2.	Notebook de classification, j’établis une stratégie d’entraînement du modèle et j’essaye d’obtenir les meilleures performances,
 3.	Un court script Python d’extraction des données d’une API pour augmenter les données. 
 
-Faisabilité 
+**Faisabilité** 
 Test de 5 méthodes de vectorisation des textes : 
-•	Bag of Words
-•	Tf-Idf
-•	Word2Vec
-•	Use
+1. Bag of Words\
+•	Tf-Idf\
+•	Word2Vec\
+•	Use\
 •	Bert
-Test de 2 méthodes de vectorisation des images : 
-•	SIFT
+2. Test de 2 méthodes de vectorisation des images : \
+•	SIFT\
 •	VGG 16
+
 Chacun des vecteurs obtenus est réduit par T-SNE en 2 dimensions. On réalise une classification k-means puis on compare la classification au réel en quantifiant avec le score d’ARI.
 Les deux meilleurs scores sont obtenus avec Tf-idf et VGG 16, respectivement 0.39 et 0.45. Pour la suite du projet je travaillerai avec VGG 16
 
 
-Entraînement du modèle
-Objectifs : 
-•	Optimisation de l’Accuracy et du temps d’entraînement 
+**Entraînement du modèle**
+Objectifs :\
+•	Optimisation de l’Accuracy et du temps d’entraînement\
 •	Identifier la meilleure fonction de perte via une cross validation
-o	MAE
-o	MSE
-o	Categorical crossentropy
-o	Poisson
+   - MAE
+   - MSE
+   - Categorical crossentropy
+   - Poisson
+
 •	Amélioration des données pour réduire le sur-apprentissage et identifier le modèle final.
+
+**Requêter API**
+Première utilisation d'une API pour peupler une base de donnée
